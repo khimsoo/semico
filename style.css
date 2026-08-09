@@ -262,6 +262,17 @@ nav {
 }
 .card h3 { font-size: 0.975rem; font-weight: 700; color: var(--navy); margin-bottom: 7px; }
 .card p { font-size: 0.875rem; color: var(--muted); line-height: 1.55; }
+.svc-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--teal);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+.svc-link:hover { color: var(--navy); border-bottom-color: var(--navy); }
 
 /* ── EQUIPMENT CARD ── */
 .eq-card {
@@ -590,11 +601,12 @@ footer a:hover { color: rgba(255,255,255,0.8); }
   background: var(--off-white);
   line-height: 0;
 }
+/* Show full image at natural proportions — no cropping */
 .eq-img-single img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
   display: block;
+  border-radius: 10px;
 }
 
 .eq-img-stack {
@@ -602,11 +614,10 @@ footer a:hover { color: rgba(255,255,255,0.8); }
   flex-direction: column;
   gap: 8px;
 }
-/* Wide landscape images (wet bench, exhaust) — short crop suits them */
+/* Stack: full image at natural proportions */
 .eq-img-stack img {
   width: 100%;
-  aspect-ratio: 5 / 2;
-  object-fit: cover;
+  height: auto;
   border-radius: 8px;
   display: block;
 }
@@ -642,47 +653,57 @@ footer a:hover { color: rgba(255,255,255,0.8); }
   transform: translateY(-3px);
 }
 
-/* Card photo area — all use the same aspect ratio so cards align */
+/* Card photo area — contain so full image is always visible */
 .eq-card-photo {
   width: 100%;
-  overflow: hidden;
   background: var(--off-white);
   line-height: 0;
-  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
 }
 .eq-card-photo img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 280px;
+  object-fit: contain;
   display: block;
 }
 
-/* Side-by-side dual photo — same overall height as single */
+/* Duo — two portrait images side by side, contained fully */
 .eq-card-photo-duo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2px;
-  aspect-ratio: 4 / 3;
+  gap: 8px;
+  background: var(--off-white);
+  padding: 16px;
+  box-sizing: border-box;
 }
 .eq-card-photo-duo img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 240px;
+  object-fit: contain;
   display: block;
+  background: var(--off-white);
 }
 
-/* Three-photo strip — same overall height */
+/* Trio — three images in a row, contained */
 .eq-card-photo-trio {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2px;
-  aspect-ratio: 4 / 3;
+  gap: 8px;
+  background: var(--off-white);
+  padding: 12px;
+  box-sizing: border-box;
 }
 .eq-card-photo-trio img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 160px;
+  object-fit: contain;
   display: block;
+  background: var(--off-white);
 }
 
 .eq-card-header {
@@ -757,47 +778,87 @@ footer a:hover { color: rgba(255,255,255,0.8); }
   padding: 64px 48px;
 }
 
-/* ── RESPONSIVE ── */
+/* ── RESPONSIVE: TABLET (≤900px) ── */
 @media (max-width: 900px) {
   nav { padding: 0 24px; }
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
 
-  .hero, .page-hero { padding: 52px 24px 40px; }
+  .hero   { padding: 56px 24px 44px; }
+  .page-hero { padding: 40px 24px 32px; }
   .section { padding: 48px 20px; }
 
+  /* Two-col grids → single column */
   .about-grid,
   .fire-grid,
   .contact-grid,
-  .eq-row { grid-template-columns: 1fr; gap: 28px; }
+  .eq-row { grid-template-columns: 1fr; gap: 24px; }
 
-  /* On mobile, always show media before body regardless of flip */
+  /* Flip rows: always image first on mobile */
   .eq-row-flip .eq-row-media { order: 0; }
   .eq-row-flip .eq-row-body  { order: 1; }
 
-  .eq-cta-band { padding: 48px 24px; }
+  .eq-row-divider { margin: 32px 0; }
+  .eq-card-grid   { margin-top: 24px; }
+  .eq-cta-band    { padding: 48px 24px; }
 
+  /* Process grid 3→2 cols */
   .process-grid { grid-template-columns: 1fr 1fr; }
 
+  /* Fire page */
   .fire-list { grid-template-columns: 1fr; }
 
-  .stat { border-right: none; border-bottom: 1px solid var(--border); }
+  /* Stats band — stack vertically */
+  .stats-band { flex-direction: column; align-items: stretch; }
+  .stat { border-right: none; border-bottom: 1px solid var(--border); max-width: 100%; }
   .stat:last-child { border-bottom: none; }
 
-  .page-hero { padding: 40px 24px 32px; }
+  /* Slightly smaller hero heading */
+  .hero h1 { font-size: clamp(1.6rem, 5vw, 2.4rem); }
 }
 
+/* ── RESPONSIVE: MOBILE (≤600px) ── */
 @media (max-width: 600px) {
   nav { padding: 0 16px; }
-  .hero { padding: 48px 16px 36px; }
-  .section { padding: 40px 16px; }
-  .page-hero { padding: 36px 16px 28px; }
+  .hero   { padding: 44px 16px 32px; }
+  .page-hero { padding: 32px 16px 24px; }
+  .section { padding: 36px 16px; }
 
-  .process-grid { grid-template-columns: 1fr; }
+  /* Single-col card grid */
   .card-grid { grid-template-columns: 1fr; }
 
-  .contact-grid { gap: 32px; }
+  /* Process grid → 1 col */
+  .process-grid { grid-template-columns: 1fr; }
 
-  table { font-size: 0.8rem; }
-  th, td { padding: 10px 12px; }
+  /* Values grid → 1 col on phones */
+  .values-grid { grid-template-columns: 1fr; }
+
+  /* Equipment duo/trio photo strips → compact on phones */
+  .eq-card-photo-duo { gap: 4px; padding: 10px; }
+  .eq-card-photo-duo img { height: 160px; }
+  .eq-card-photo-trio { grid-template-columns: 1fr 1fr; gap: 4px; padding: 8px; }
+  .eq-card-photo-trio img { height: 100px; }
+
+  /* ArisMD stats stay 2-col — readable at small size */
+  .aris-stats { gap: 8px; }
+  .aris-num   { font-size: 1.1rem; }
+
+  /* Hero buttons stack */
+  .hero-btns { flex-direction: column; align-items: center; gap: 10px; }
+  .hero-btns .btn { width: 100%; max-width: 280px; text-align: center; }
+
+  /* Section typography */
+  .section-title  { font-size: 1.3rem; }
+  .section-subtitle { font-size: 0.875rem; }
+
+  /* Contact */
+  .contact-grid { gap: 24px; }
+
+  /* Table */
+  table   { font-size: 0.8rem; }
+  th, td  { padding: 10px 12px; }
+
+  /* Reduce large gaps */
+  .eq-row-divider { margin: 20px 0; }
+  .eq-cta-band    { padding: 40px 16px; }
 }

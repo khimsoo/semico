@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SemiCo – Cleanroom</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Semi<span>Co</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="equipment.html">Equipment</a></li>
+    <li><a href="fire.html">Fire Protection</a></li>
+    <li><a href="cleanroom.html" class="active">Cleanroom</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="equipment.html">Equipment</a></li>
+    <li><a href="fire.html">Fire Protection</a></li>
+    <li><a href="cleanroom.html" class="active">Cleanroom</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+<div class="page-hero">
+  <p class="eyebrow">Construction Services</p>
+  <h1>Cleanroom Build</h1>
+  <p>Turnkey cleanroom construction — from planning and design to ISO certification and ongoing operations.</p>
+</div>
+
+<!-- PROCESS -->
+<section class="section">
+  <div class="container">
+    <p class="section-label">Our Process</p>
+    <h2 class="section-title">Six-Phase Delivery</h2>
+    <p class="section-subtitle">A structured approach ensuring ISO-compliant cleanroom delivery on time and within budget.</p>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h4>Planning &amp; Requirements</h4>
+        <p>Define project scope, ISO class level, utilities. Assess facility space, workflow, and contamination control. Set lead time and compliance standards.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h4>Design &amp; Engineering</h4>
+        <p>Architectural layout for cleanroom zones. HVAC and filtration system design. Utility integration — DIW, PCW, gases, electrical, waste treatment.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h4>Construction</h4>
+        <p>Build cleanroom structure — walls, flooring, ceiling, airlocks. Install HVAC, filtration, and pressure control. Set up DIW/PCW pipelines and waste treatment.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h4>Equipment Installation</h4>
+        <p>Deliver and install semiconductor tools and cleanroom equipment. Connect all utilities — water, cooling, gases, power. Validate equipment performance.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">5</div>
+        <h4>Testing &amp; Validation</h4>
+        <p>Perform cleanroom certification to ISO standards. Test DIW, PCW, and waste treatment systems. Validate airflow, particle counts, and environmental stability.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">6</div>
+        <h4>Operations &amp; Maintenance</h4>
+        <p>Ongoing monitoring of cleanroom performance. Preventive maintenance for utilities and equipment. Continuous improvement for efficiency and shorter lead times.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  © 2024 SemiCo Pte Ltd · UEN: 202617968W ·
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const drawer = document.getElementById('navDrawer');
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    drawer.classList.toggle('open');
+  });
+</script>
+</body>
+</html>

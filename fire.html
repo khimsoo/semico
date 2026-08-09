@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SemiCo – Fire Protection</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Semi<span>Co</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="equipment.html">Equipment</a></li>
+    <li><a href="fire.html" class="active">Fire Protection</a></li>
+    <li><a href="cleanroom.html">Cleanroom</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="equipment.html">Equipment</a></li>
+    <li><a href="fire.html" class="active">Fire Protection</a></li>
+    <li><a href="cleanroom.html">Cleanroom</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+<div class="page-hero" style="background:linear-gradient(135deg,#7B1818 0%,#96281B 100%);">
+  <p class="eyebrow">Safety Systems</p>
+  <h1>Fire Protection</h1>
+  <p>Installation, commissioning, and maintenance of fire protection systems by personnel with 30+ years of industry experience.</p>
+</div>
+
+<!-- OVERVIEW -->
+<section class="section">
+  <div class="container">
+    <div class="fire-grid">
+      <div>
+        <p class="section-label">Our Expertise</p>
+        <h2 class="section-title">Fire Suppression Systems</h2>
+        <p style="margin-bottom:14px;">SemiCo's fire protection division has handled multiple projects across Singapore — from semiconductor fabs to pharmaceutical facilities — delivering to the highest safety standards.</p>
+        <p style="margin-bottom:20px;">All work is carried out by trained personnel with more than 30 years of experience in the industry.</p>
+        <p class="section-label" style="margin-bottom:10px;">Systems We Install &amp; Service</p>
+        <ul class="fire-list">
+          <li>Fire Suppression System</li>
+          <li>Fire Extinguisher</li>
+          <li>VESDA</li>
+          <li>Hose Reel</li>
+          <li>Manual Call Point</li>
+          <li>Fire Alarm Bell</li>
+          <li>Smoke Detector</li>
+          <li>Strobe Light</li>
+        </ul>
+      </div>
+      <div class="fire-highlight">
+        <h3>What We Deliver</h3>
+        <p>Installation and commissioning of fire suppression, alarm, and detection systems.</p>
+        <p>Annual inspection and testing to Singapore regulatory standards.</p>
+        <p>Emergency response support and rapid incident management.</p>
+        <p>Preventive maintenance programs for all system types.</p>
+        <p style="margin-top:20px;font-size:0.775rem;opacity:0.7;">30+ years combined team experience · Multiple Singapore project references</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  © 2024 SemiCo Pte Ltd · UEN: 202617968W ·
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const drawer = document.getElementById('navDrawer');
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    drawer.classList.toggle('open');
+  });
+</script>
+</body>
+</html>

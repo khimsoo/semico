@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SemiCo – Contact</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Semi<span>Co</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="equipment.html">Equipment</a></li>
+    <li><a href="fire.html">Fire Protection</a></li>
+    <li><a href="cleanroom.html">Cleanroom</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="equipment.html">Equipment</a></li>
+    <li><a href="fire.html">Fire Protection</a></li>
+    <li><a href="cleanroom.html">Cleanroom</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</div>
+
+<!-- CONTACT SECTION -->
+<section style="background:var(--navy);padding:64px 48px;min-height:calc(100vh - 60px - 56px);">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <p class="section-label" style="color:var(--teal-light);">Get In Touch</p>
+        <h2 class="section-title" style="color:var(--white);">Contact &amp; Service</h2>
+        <p style="color:rgba(255,255,255,0.65);margin-bottom:0;font-size:0.9375rem;">Reach out to discuss your project requirements, equipment needs, or service enquiries.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="c-icon">📍</div>
+            <div>
+              <p class="c-label">Address</p>
+              <p class="c-val">9012 Tampines Street 93, #04-211<br>Singapore 528845</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">📞</div>
+            <div>
+              <p class="c-label">Telephone</p>
+              <p class="c-val"><a href="tel:+6581988828" style="color:rgba(255,255,255,0.9);text-decoration:none;">+65 8198 8828</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">✉️</div>
+            <div>
+              <p class="c-label">Email</p>
+              <p class="c-val"><a href="mailto:Soonkt@Semico-sg.com" style="color:rgba(255,255,255,0.9);text-decoration:none;">Soonkt@Semico-sg.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">🏢</div>
+            <div>
+              <p class="c-label">UEN</p>
+              <p class="c-val">202617968W</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="section-label" style="color:var(--teal-light);">What We Offer</p>
+        <h3 style="color:var(--white);font-size:1.125rem;font-weight:600;margin-bottom:20px;">Our Services &amp; Products</h3>
+        <p style="color:rgba(255,255,255,0.55);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;">Services</p>
+        <ul class="services-list" style="margin-bottom:28px;">
+          <li>Engineering Solution, Design &amp; Build Control Systems</li>
+          <li>Maintenance &amp; Servicing — Fire Suppression Systems</li>
+          <li>Anti-Vibration Systems</li>
+          <li>Exhaust System incl. Acid / Ammonia Scrubber</li>
+          <li>DIW / PCW Systems</li>
+        </ul>
+        <p style="color:rgba(255,255,255,0.55);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;">Products &amp; Solutions</p>
+        <ul class="services-list">
+          <li>Equipment Buy / Sell / R&amp;D</li>
+          <li>Global Procurement</li>
+          <li>Construction Works</li>
+          <li>Project Management</li>
+          <li>Facility Management</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2024 SemiCo Pte Ltd · UEN: 202617968W ·
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const drawer = document.getElementById('navDrawer');
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    drawer.classList.toggle('open');
+  });
+</script>
+</body>
+</html>

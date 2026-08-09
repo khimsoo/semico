@@ -39,20 +39,22 @@
   <p>We design, fabricate and sell new semiconductor processing equipment — from wet process and CMP to exhaust systems and active vibration isolation. All equipment is purpose-built to specification.</p>
 </div>
 
-<!-- ── SECTION 1: WET PROCESS ──────────────────────────────── -->
+<!-- ── SECTION 1: WET PROCESS ──────────────────── -->
 <section class="section">
   <div class="container">
     <p class="section-label">Wet Process Equipment</p>
     <h2 class="section-title">Wafer Cleaning &amp; Chemical Handling</h2>
     <p class="section-subtitle">Precision equipment for wafer cleaning, chemical dispensing, and drying — designed and fabricated by SemiCo.</p>
 
-    <!-- Wet Bench -->
-    <div class="eq-feature">
-      <div class="eq-feature-imgs">
-        <img src="img/wet-bench.jpg" alt="SemiCo Wet Bench System with robot rail and chemical tanks" loading="lazy"/>
-        <img src="img/wet-bench-2.jpg" alt="Wet bench chemical processing module" loading="lazy"/>
+    <!-- Wet Bench: image left, specs right -->
+    <div class="eq-row">
+      <div class="eq-row-media">
+        <div class="eq-img-stack">
+          <img src="img/wet-bench.jpg" alt="Wet bench system with robot rail and chemical tanks" loading="lazy"/>
+          <img src="img/wet-bench-2.jpg" alt="Wet bench chemical processing module" loading="lazy"/>
+        </div>
       </div>
-      <div class="eq-feature-body">
+      <div class="eq-row-body">
         <span class="tag-inline">Design &amp; Fabricate</span>
         <h3>Wet Bench Systems</h3>
         <p>Designed for RCA cleans, HF dips, and IPA drying with full safety compliance for semiconductor fabs.</p>
@@ -67,10 +69,13 @@
       </div>
     </div>
 
-    <!-- Chemical Dispenser + SRD side by side -->
-    <div class="card-grid" style="margin-top:32px;">
+    <!-- Chemical Dispenser + SRD as cards -->
+    <div class="card-grid eq-card-grid">
+
       <div class="eq-card">
-        <img src="img/chemical-dispenser.jpg" alt="Chemical Dispenser Unit with AODD pump" class="eq-card-img" loading="lazy"/>
+        <div class="eq-card-photo">
+          <img src="img/chemical-dispenser.jpg" alt="Chemical Dispenser unit with AODD pump and magnehelic gauge" loading="lazy"/>
+        </div>
         <div class="eq-card-header">
           <span class="tag">Design &amp; Fabricate</span>
           <h3>Chemical Dispenser Units</h3>
@@ -89,9 +94,9 @@
       </div>
 
       <div class="eq-card">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
-          <img src="img/srd-1.jpg" alt="SRD Spin Rinse Dry single chamber" class="eq-card-img" loading="lazy" style="height:200px;object-fit:cover;"/>
-          <img src="img/srd-2.jpg" alt="SRD dual chamber configuration" class="eq-card-img" loading="lazy" style="height:200px;object-fit:cover;"/>
+        <div class="eq-card-photo eq-card-photo-duo">
+          <img src="img/srd-1.jpg" alt="SRD spin rinse dry single chamber" loading="lazy"/>
+          <img src="img/srd-2.jpg" alt="SRD dual chamber configuration" loading="lazy"/>
         </div>
         <div class="eq-card-header">
           <span class="tag">Design &amp; Fabricate</span>
@@ -101,30 +106,33 @@
           <p>Single or dual chamber configurations for silicon wafer cleaning and drying.</p>
           <p class="spec-label">Specifications</p>
           <ul class="spec-list">
-            <li>Wafer size: 2 – 12 inch silicon wafers</li>
+            <li>Wafer size: 2–12 inch silicon wafers</li>
             <li>Single or dual chamber configuration</li>
-            <li>Throughput: ≥ 200 WPH</li>
+            <li>Throughput: ≥200 WPH</li>
             <li>DI water rinse + N₂ dry cycle</li>
           </ul>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ── SECTION 2: CMP ───────────────────────────────────────── -->
+<!-- ── SECTION 2: CMP ──────────────────────────── -->
 <section class="section section-alt">
   <div class="container">
     <p class="section-label">Panel Processing</p>
     <h2 class="section-title">CMP — Chemical Mechanical Planarisation</h2>
     <p class="section-subtitle">Large-format panel CMP systems custom-built for flat panel display substrates and advanced packaging applications.</p>
 
-    <!-- CMP 510x515 -->
-    <div class="eq-feature" style="margin-bottom:48px;">
-      <div class="eq-feature-imgs single">
-        <img src="img/cmp-510x515.jpg" alt="CMP system for 510x515 panels with dual platens" loading="lazy"/>
+    <!-- CMP 510×515: image left -->
+    <div class="eq-row">
+      <div class="eq-row-media">
+        <div class="eq-img-single">
+          <img src="img/cmp-510x515.jpg" alt="CMP machine for 510×515 panels with dual platens" loading="lazy"/>
+        </div>
       </div>
-      <div class="eq-feature-body">
+      <div class="eq-row-body">
         <span class="tag-inline">Design &amp; Fabricate</span>
         <h3>CMP for 510×515 Panels</h3>
         <p>Dual-platen, dual-head polishing system for large-format panel substrates.</p>
@@ -132,21 +140,25 @@
         <ul class="spec-list">
           <li>Overall dimensions: 10,800 × 3,370 × 2,650 mm</li>
           <li>Dual platens / Dual polishing heads</li>
-          <li>Panel warpage tolerance: &lt; ±10 mm</li>
+          <li>Panel warpage tolerance: &lt;±10 mm</li>
           <li>Panel size: 510 × 515 mm</li>
         </ul>
       </div>
     </div>
 
-    <!-- CMP 515x510 -->
-    <div class="eq-feature eq-feature-reverse">
-      <div class="eq-feature-imgs single">
-        <img src="img/cmp-515x510.jpg" alt="CMP tool layout with polisher, cleaner and automation modules" loading="lazy"/>
+    <div class="eq-row-divider"></div>
+
+    <!-- CMP 515×510: image right -->
+    <div class="eq-row eq-row-flip">
+      <div class="eq-row-media">
+        <div class="eq-img-single">
+          <img src="img/cmp-515x510.jpg" alt="CMP tool layout with polisher, cleaner and automation modules" loading="lazy"/>
+        </div>
       </div>
-      <div class="eq-feature-body">
+      <div class="eq-row-body">
         <span class="tag-inline">Design &amp; Fabricate</span>
         <h3>CMP for 515×510 Panels</h3>
-        <p>Full tool layout with automated wafer handling between polishing and cleaning modules.</p>
+        <p>Full tool layout with automated panel handling between polishing and cleaning modules.</p>
         <p class="spec-label">Tool Layout</p>
         <ul class="spec-list">
           <li>Polisher A1 &amp; A2 modules</li>
@@ -160,15 +172,18 @@
   </div>
 </section>
 
-<!-- ── SECTION 3: FOUP + SiC ──────────────────────────────── -->
+<!-- ── SECTION 3: FOUP + SiC ───────────────────── -->
 <section class="section">
   <div class="container">
     <p class="section-label">Advanced Materials</p>
     <h2 class="section-title">FOUP Cleaner &amp; SiC Equipment</h2>
-    <div class="card-grid">
+    <p class="section-subtitle">Specialist equipment for advanced packaging and silicon carbide wafer manufacturing.</p>
+    <div class="card-grid eq-card-grid">
 
       <div class="eq-card">
-        <img src="img/foup-cleaner.jpg" alt="FOUP Cleaner process layout with loader, clean chamber and FFU" class="eq-card-img" loading="lazy"/>
+        <div class="eq-card-photo">
+          <img src="img/foup-cleaner.jpg" alt="FOUP cleaner process layout with loader, clean chamber and FFU" loading="lazy"/>
+        </div>
         <div class="eq-card-header">
           <span class="tag">Design &amp; Fabricate</span>
           <h3>FOUP Cleaner (510×515 Panels)</h3>
@@ -187,7 +202,9 @@
       </div>
 
       <div class="eq-card">
-        <img src="img/sic-equipment.jpg" alt="Silicon carbide wafer fabrication process flow diagram" class="eq-card-img" loading="lazy"/>
+        <div class="eq-card-photo">
+          <img src="img/sic-equipment.jpg" alt="Silicon carbide wafer fabrication process flow" loading="lazy"/>
+        </div>
         <div class="eq-card-header">
           <span class="tag">SiC Fabrication</span>
           <h3>Equipment for SiC Wafers</h3>
@@ -209,40 +226,44 @@
   </div>
 </section>
 
-<!-- ── SECTION 4: K&S ARISM ────────────────────────────────── -->
+<!-- ── SECTION 4: K&S ArisMD ──────────────────── -->
 <section class="section section-alt">
   <div class="container">
     <p class="section-label">Vibration Control</p>
     <h2 class="section-title">K&amp;S ArisMD Active Vibration Isolation</h2>
     <p class="section-subtitle">AI-integrated active vibration control — eliminating the need for expensive passive retrofits.</p>
 
-    <div class="eq-feature">
-      <div class="eq-feature-imgs single">
-        <img src="img/ks-arism.jpg" alt="K&S ArisMD modular active vibration isolation system" loading="lazy"/>
+    <div class="eq-row">
+      <div class="eq-row-media">
+        <div class="eq-img-single">
+          <img src="img/ks-arism.jpg" alt="K&S ArisMD modular active vibration isolation system" loading="lazy"/>
+        </div>
       </div>
-      <div class="eq-feature-body">
+      <div class="eq-row-body">
         <span class="tag-inline">Sale of New Equipment</span>
         <h3>K&amp;S ArisMD Smart Pedestal</h3>
-        <p>The ArisMD features <strong>internal vibration sensors</strong>, a <strong>smart analyzer</strong>, <strong>machine learning</strong>, and <strong>AI capabilities</strong> — built on a honeycomb platform with precision metal blocks.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;">
-          <div style="background:var(--navy);border-radius:6px;padding:14px;text-align:center;">
-            <p style="font-size:1.3rem;font-weight:700;color:var(--accent);">6-DOF</p>
-            <p style="font-size:0.72rem;color:rgba(255,255,255,0.6);margin-top:3px;">6 Degrees of Freedom</p>
+        <p>The ArisMD features internal vibration sensors, a smart analyzer, machine learning, and AI capabilities — built on a honeycomb platform with precision metal block load distribution.</p>
+
+        <div class="aris-stats">
+          <div class="aris-stat">
+            <span class="aris-num">6-DOF</span>
+            <span class="aris-lbl">Degrees of Freedom</span>
           </div>
-          <div style="background:var(--navy);border-radius:6px;padding:14px;text-align:center;">
-            <p style="font-size:1.3rem;font-weight:700;color:var(--accent);">~20 dB</p>
-            <p style="font-size:0.72rem;color:rgba(255,255,255,0.6);margin-top:3px;">Reduction at 3 Hz</p>
+          <div class="aris-stat">
+            <span class="aris-num">~20 dB</span>
+            <span class="aris-lbl">Reduction at 3 Hz</span>
           </div>
-          <div style="background:var(--navy);border-radius:6px;padding:14px;text-align:center;">
-            <p style="font-size:1.3rem;font-weight:700;color:var(--accent);">&lt;0.1s</p>
-            <p style="font-size:0.72rem;color:rgba(255,255,255,0.6);margin-top:3px;">Settling Time</p>
+          <div class="aris-stat">
+            <span class="aris-num">&lt;0.1s</span>
+            <span class="aris-lbl">Settling Time</span>
           </div>
-          <div style="background:var(--navy);border-radius:6px;padding:14px;text-align:center;">
-            <p style="font-size:1.3rem;font-weight:700;color:var(--accent);">~8 dB</p>
-            <p style="font-size:0.72rem;color:rgba(255,255,255,0.6);margin-top:3px;">Reduction at 1 Hz</p>
+          <div class="aris-stat">
+            <span class="aris-num">~8 dB</span>
+            <span class="aris-lbl">Reduction at 1 Hz</span>
           </div>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+
+        <div class="badge-row">
           <span class="badge">Internal Vibration Sensors</span>
           <span class="badge">Smart Analyzer</span>
           <span class="badge">Machine Learning</span>
@@ -255,20 +276,22 @@
   </div>
 </section>
 
-<!-- ── SECTION 5: EXHAUST & UTILITY ───────────────────────── -->
+<!-- ── SECTION 5: EXHAUST & UTILITY ────────────── -->
 <section class="section">
   <div class="container">
     <p class="section-label">Design &amp; Fabricate</p>
     <h2 class="section-title">Exhaust &amp; Utility Systems</h2>
     <p class="section-subtitle">Engineered-to-order exhaust ducting, scrubbers, and ultra-pure water systems — 3D-designed and fabricated in-house.</p>
 
-    <!-- Exhaust System -->
-    <div class="eq-feature" style="margin-bottom:48px;">
-      <div class="eq-feature-imgs">
-        <img src="img/exhaust-1.jpg" alt="Exhaust system 3D design with ducting layout" loading="lazy"/>
-        <img src="img/exhaust-2.jpg" alt="Compressor room FAD layout design" loading="lazy"/>
+    <!-- Exhaust System: image left -->
+    <div class="eq-row">
+      <div class="eq-row-media">
+        <div class="eq-img-stack">
+          <img src="img/exhaust-1.jpg" alt="Exhaust system 3D design with ducting layout" loading="lazy"/>
+          <img src="img/exhaust-2.jpg" alt="Compressor room FAD layout design" loading="lazy"/>
+        </div>
       </div>
-      <div class="eq-feature-body">
+      <div class="eq-row-body">
         <span class="tag-inline">Design &amp; Fabricate</span>
         <h3>Exhaust System</h3>
         <p>Custom exhaust ducting and ventilation systems — 3D modelled, fabricated, and commissioned for semiconductor fabs.</p>
@@ -283,10 +306,15 @@
       </div>
     </div>
 
-    <!-- Flammable + RO+EDI -->
-    <div class="card-grid">
+    <div class="eq-row-divider"></div>
+
+    <!-- Flammable Exhaust + RO+EDI as cards -->
+    <div class="card-grid eq-card-grid">
+
       <div class="eq-card">
-        <img src="img/flammable-exhaust.jpg" alt="Flammable exhaust system with ATEX-compliant fans" class="eq-card-img" loading="lazy"/>
+        <div class="eq-card-photo">
+          <img src="img/flammable-exhaust.jpg" alt="Flammable exhaust system with ATEX-compliant fans" loading="lazy"/>
+        </div>
         <div class="eq-card-header">
           <span class="tag">Design &amp; Fabricate</span>
           <h3>Flammable Exhaust System</h3>
@@ -304,10 +332,10 @@
       </div>
 
       <div class="eq-card">
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;">
-          <img src="img/ro-edi-1.jpg" alt="RO system module" loading="lazy" style="width:100%;height:140px;object-fit:cover;"/>
-          <img src="img/ro-edi-2.jpg" alt="EDI polishing unit" loading="lazy" style="width:100%;height:140px;object-fit:cover;"/>
-          <img src="img/ro-edi-3.jpg" alt="RO+EDI control panel" loading="lazy" style="width:100%;height:140px;object-fit:cover;"/>
+        <div class="eq-card-photo eq-card-photo-trio">
+          <img src="img/ro-edi-1.jpg" alt="RO system module" loading="lazy"/>
+          <img src="img/ro-edi-2.jpg" alt="EDI polishing unit" loading="lazy"/>
+          <img src="img/ro-edi-3.jpg" alt="RO+EDI control panel" loading="lazy"/>
         </div>
         <div class="eq-card-header">
           <span class="tag">Design &amp; Fabricate</span>
@@ -324,16 +352,17 @@
           </ul>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ── CTA ──────────────────────────────────────────────────── -->
-<section class="section" style="background:var(--navy);text-align:center;">
-  <div class="container">
+<!-- ── CTA ──────────────────────────────────────── -->
+<section class="eq-cta-band">
+  <div class="container" style="text-align:center;">
     <p class="section-label" style="color:var(--teal-light);">Enquire Now</p>
-    <h2 class="section-title" style="color:var(--white);">Looking for a specific piece of equipment?</h2>
-    <p style="color:rgba(255,255,255,0.7);max-width:560px;margin:0 auto 28px;">All our equipment is custom designed and fabricated to your process specifications. Contact us to discuss your requirements.</p>
+    <h2 class="section-title" style="color:var(--white);margin-bottom:12px;">Looking for a specific piece of equipment?</h2>
+    <p style="color:rgba(255,255,255,0.7);max-width:520px;margin:0 auto 28px;font-size:0.9375rem;">All our equipment is custom designed and fabricated to your process specifications. Contact us to discuss your requirements.</p>
     <a href="contact.html" class="cta-btn">Contact Us →</a>
   </div>
 </section>

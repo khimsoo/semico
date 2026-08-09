@@ -561,54 +561,153 @@ footer a:hover { color: rgba(255,255,255,0.8); }
   line-height: 1.5;
 }
 
-/* ── EQUIPMENT FEATURE LAYOUT ── */
-.eq-feature {
+/* ── EQUIPMENT ROW (image + body side by side) ── */
+.eq-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 36px;
+  gap: 48px;
   align-items: start;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
-.eq-feature-reverse {
-  direction: rtl;
+
+/* Flip: body left, image right */
+.eq-row-flip .eq-row-media { order: 2; }
+.eq-row-flip .eq-row-body  { order: 1; }
+
+.eq-row-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 48px 0;
 }
-.eq-feature-reverse > * {
-  direction: ltr;
-}
-.eq-feature-imgs {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.eq-feature-imgs img,
-.eq-feature-imgs.single img {
+
+/* Media column — images */
+.eq-row-media { width: 100%; }
+
+.eq-img-single {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--off-white);
+  line-height: 0;
+}
+.eq-img-single img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
 }
-.eq-feature-body h3 {
+
+.eq-img-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+/* Wide landscape images (wet bench, exhaust) — short crop suits them */
+.eq-img-stack img {
+  width: 100%;
+  aspect-ratio: 5 / 2;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Body column */
+.eq-row-body h3 {
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--navy);
   margin: 10px 0 8px;
 }
-.eq-feature-body p {
+.eq-row-body p {
   font-size: 0.875rem;
   color: var(--muted);
   line-height: 1.6;
   margin-bottom: 6px;
 }
 
-/* Eq card image */
-.eq-card-img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  max-height: 220px;
+/* ── EQUIPMENT CARDS ── */
+.eq-card-grid { margin-top: 40px; }
+
+.eq-card {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.eq-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.09);
+  transform: translateY(-3px);
 }
 
-/* Inline tag (used outside eq-card-header) */
+/* Card photo area — all use the same aspect ratio so cards align */
+.eq-card-photo {
+  width: 100%;
+  overflow: hidden;
+  background: var(--off-white);
+  line-height: 0;
+  aspect-ratio: 4 / 3;
+}
+.eq-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Side-by-side dual photo — same overall height as single */
+.eq-card-photo-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  aspect-ratio: 4 / 3;
+}
+.eq-card-photo-duo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Three-photo strip — same overall height */
+.eq-card-photo-trio {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+  aspect-ratio: 4 / 3;
+}
+.eq-card-photo-trio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.eq-card-header {
+  background: linear-gradient(135deg, var(--navy), #0D3B5E);
+  color: var(--white);
+  padding: 14px 18px;
+}
+.eq-card-header .tag {
+  display: inline-block;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.15);
+  border-radius: 3px;
+  padding: 3px 7px;
+  margin-bottom: 6px;
+}
+.eq-card-header h3 { font-size: 0.9375rem; font-weight: 600; }
+.eq-card-body {
+  padding: 16px 18px;
+  flex: 1;
+}
+.eq-card-body p { font-size: 0.85rem; color: var(--muted); line-height: 1.55; }
+
+/* Inline tag pill (used in eq-row-body) */
 .tag-inline {
   display: inline-block;
   font-size: 0.62rem;
@@ -618,6 +717,44 @@ footer a:hover { color: rgba(255,255,255,0.8); }
   color: var(--white);
   border-radius: 3px;
   padding: 3px 8px;
+}
+
+/* ── K&S ArisMD stats ── */
+.aris-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 18px 0 14px;
+}
+.aris-stat {
+  background: var(--navy);
+  border-radius: 6px;
+  padding: 14px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.aris-num {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.aris-lbl {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.6);
+}
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* ── CTA band ── */
+.eq-cta-band {
+  background: var(--navy);
+  padding: 64px 48px;
 }
 
 /* ── RESPONSIVE ── */
@@ -632,8 +769,13 @@ footer a:hover { color: rgba(255,255,255,0.8); }
   .about-grid,
   .fire-grid,
   .contact-grid,
-  .eq-feature { grid-template-columns: 1fr; gap: 28px; }
-  .eq-feature-reverse { direction: ltr; }
+  .eq-row { grid-template-columns: 1fr; gap: 28px; }
+
+  /* On mobile, always show media before body regardless of flip */
+  .eq-row-flip .eq-row-media { order: 0; }
+  .eq-row-flip .eq-row-body  { order: 1; }
+
+  .eq-cta-band { padding: 48px 24px; }
 
   .process-grid { grid-template-columns: 1fr 1fr; }
 

@@ -561,6 +561,65 @@ footer a:hover { color: rgba(255,255,255,0.8); }
   line-height: 1.5;
 }
 
+/* ── EQUIPMENT FEATURE LAYOUT ── */
+.eq-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+.eq-feature-reverse {
+  direction: rtl;
+}
+.eq-feature-reverse > * {
+  direction: ltr;
+}
+.eq-feature-imgs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.eq-feature-imgs img,
+.eq-feature-imgs.single img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+.eq-feature-body h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 10px 0 8px;
+}
+.eq-feature-body p {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+/* Eq card image */
+.eq-card-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 220px;
+}
+
+/* Inline tag (used outside eq-card-header) */
+.tag-inline {
+  display: inline-block;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--teal);
+  color: var(--white);
+  border-radius: 3px;
+  padding: 3px 8px;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   nav { padding: 0 24px; }
@@ -572,7 +631,9 @@ footer a:hover { color: rgba(255,255,255,0.8); }
 
   .about-grid,
   .fire-grid,
-  .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+  .contact-grid,
+  .eq-feature { grid-template-columns: 1fr; gap: 28px; }
+  .eq-feature-reverse { direction: ltr; }
 
   .process-grid { grid-template-columns: 1fr 1fr; }
 

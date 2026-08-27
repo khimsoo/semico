@@ -425,7 +425,7 @@ tbody tr { border-bottom: 1px solid var(--border); }
 .process-step h4 { font-size: 0.9rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
 .process-step p { font-size: 0.8rem; color: var(--muted); }
 
-/* ── ORG CHART ── */
+/* ── ORG CHART (generic) ── */
 .org-wrap { text-align: center; }
 .org-md {
   display: inline-block;
@@ -455,6 +455,82 @@ tbody tr { border-bottom: 1px solid var(--border); }
   font-weight: 600;
   padding: 9px 18px;
   border-radius: 6px;
+}
+
+/* ── FIRE ORG CHART ── */
+.fire-org { text-align: center; }
+
+.fire-org-level { display: flex; justify-content: center; }
+
+.fire-org-node {
+  border-radius: 8px;
+  padding: 18px 32px;
+  min-width: 260px;
+  text-align: center;
+}
+.fire-org-node .node-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 5px; }
+.fire-org-node .node-role  { font-size: 0.8rem; opacity: 0.82; margin-bottom: 3px; }
+.fire-org-node .node-note  { font-size: 0.72rem; opacity: 0.6; letter-spacing: 0.02em; }
+
+.fire-org-node-top { background: #7B1818; color: var(--white); }
+.fire-org-node-mid { background: var(--navy); color: var(--white); }
+
+.fire-org-vline {
+  width: 2px; height: 28px;
+  background: var(--border);
+  margin: 0 auto;
+}
+
+/* Horizontal branch line + vertical drops */
+.fire-org-connector {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+.fire-org-connector::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 12%; right: 12%;
+  height: 2px;
+  background: var(--border);
+}
+.fire-org-tech-wrap {
+  position: relative;
+  flex: 1;
+  max-width: 210px;
+  padding-top: 26px;
+  display: flex;
+  justify-content: center;
+}
+.fire-org-tech-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0; left: calc(50% - 1px);
+  width: 2px; height: 26px;
+  background: var(--border);
+}
+.fire-org-leaf {
+  width: 100%;
+  background: var(--white);
+  border: 1.5px solid var(--teal);
+  border-top: 3px solid var(--teal);
+  border-radius: 8px;
+  padding: 14px 14px;
+  text-align: center;
+}
+.fire-org-leaf .node-title { color: var(--navy); font-weight: 700; font-size: 0.875rem; margin-bottom: 4px; }
+.fire-org-leaf .node-role  { color: var(--muted); font-size: 0.76rem; line-height: 1.4; }
+
+@media (max-width: 900px) {
+  .fire-org-connector { flex-wrap: wrap; gap: 10px; }
+  .fire-org-connector::before { display: none; }
+  .fire-org-tech-wrap { max-width: calc(50% - 5px); padding-top: 0; }
+  .fire-org-tech-wrap::before { display: none; }
+  .fire-org-node { min-width: 200px; padding: 16px 20px; }
+}
+@media (max-width: 600px) {
+  .fire-org-tech-wrap { max-width: 100%; }
 }
 
 /* ── CONTACT ── */
